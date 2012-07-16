@@ -1,0 +1,9 @@
+参考
+[1]http://www.7-zip.org/sdk.html
+[2]http://www.modejong.com/iOS/
+我对官方lzmaSDK（9.22 Beta）做了若干修改，包括删除了若干文件，添加了一个简单的objective-C解压7z文件借口，只为了满足我自己的需求。
+
+从参考[1]下载lzmaSDK（9.22 Beta）版本，然后对目录"/lzma922/C"下文件做了以下修改
+1.删除若干文件，具体请对比我修改版本和原来版本。
+2.修改目录"/lzma922/C/Util/7z/7zMain.c"的main函数为 int do7z_extract_entry(char *archivePath, char *entryName, char *entryPath)
+3.添加了LV_LZMAUtil.h 文件 和extract7zArchive 接口
